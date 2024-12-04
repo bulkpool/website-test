@@ -1,0 +1,22 @@
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+  
+  .stat-card {
+    text-align: center;
+  }
+  
+  .uterus-icon {
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 1rem;
+  }
+  
+  .stat-text {
+    color: var(--text-gray);
+  }

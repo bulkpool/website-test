@@ -1,7 +1,15 @@
+.navbar {
+  background-color: var(--primary-color);
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+
 .nav-link {
-    transition: opacity 0.2s ease-in-out;
-  }
-  
-  .nav-link:hover {
-    opacity: 0.8;
-  }
+  color: white;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}

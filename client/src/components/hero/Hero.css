@@ -1,5 +1,20 @@
 .hero-section {
-    background-image: url('../../assets/wave-pattern.svg');
-    background-size: cover;
-    background-position: center;
-  }
+  min-height: 100vh;
+  background-image: url('../../assets/images/uterus.c83434b7.webp');
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px;
+}
+
+.hero-title {
+  color: var(--primary-color);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  color: var(--text-gray);
+  max-width: 42rem;
+  line-height: 1.75;
+}

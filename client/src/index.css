@@ -4,11 +4,11 @@
 
 :root {
   --primary-color: #FF1654;
-  --text-gray: #4A5568;
+  --background-color: #FFF5F7;
 }
 
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
 }

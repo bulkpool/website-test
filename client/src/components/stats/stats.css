@@ -1,22 +1,19 @@
+.stats-section {
+  @apply py-16 px-4;
+}
+
 .stats-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 1rem;
-  }
-  
-  .stat-card {
-    text-align: center;
-  }
-  
-  .uterus-icon {
-    width: 6rem;
-    height: 6rem;
-    margin: 0 auto 1rem;
-  }
-  
-  .stat-text {
-    color: var(--text-gray);
-  }
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto;
+}
+
+.stat-card {
+  @apply text-center;
+}
+
+.stat-icon {
+  @apply w-24 h-24 mx-auto mb-4;
+}
+
+.stat-text {
+  @apply text-gray-700;
+}

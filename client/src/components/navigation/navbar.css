@@ -1,15 +1,19 @@
 .navbar {
-  background-color: var(--primary-color);
-  position: fixed;
-  width: 100%;
-  z-index: 50;
+  @apply bg-[#FF1654] fixed w-full z-50 py-4;
+}
+
+.nav-container {
+  @apply max-w-7xl mx-auto px-4 flex justify-between items-center;
+}
+
+.nav-logo {
+  @apply h-8;
+}
+
+.nav-links {
+  @apply hidden md:flex space-x-8;
 }
 
 .nav-link {
-  color: white;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.nav-link:hover {
-  opacity: 0.8;
+  @apply text-white hover:opacity-80 transition-opacity;
 }

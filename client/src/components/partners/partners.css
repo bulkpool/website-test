@@ -1,26 +1,15 @@
 .partners-section {
-    padding: 4rem 0;
-  }
-  
-  .partners-title {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-  }
-  
-  .partners-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .partner-logo {
-    height: 4rem;
-    object-fit: contain;
-  }
+  @apply py-16 px-4;
+}
+
+.partners-title {
+  @apply text-2xl font-bold text-center mb-8;
+}
+
+.partners-container {
+  @apply flex justify-center items-center gap-12 flex-wrap max-w-4xl mx-auto;
+}
+
+.partner-logo {
+  @apply h-16 object-contain;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './stats.css';
+import logo from '../../assets/images/Asset 1.svg';
 
 const StatsCard = () => {
   return (
@@ -7,7 +8,7 @@ const StatsCard = () => {
       {[1, 2, 3].map((item) => (
         <div key={item} className="text-center">
           <img 
-            src="/uterus-icon.svg" 
+            src={logo} 
             alt="Uterus Icon" 
             className="w-24 h-24 mx-auto mb-4"
           />

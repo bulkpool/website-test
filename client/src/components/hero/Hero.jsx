@@ -1,10 +1,12 @@
 import React from 'react';
 import './Hero.css';
 
+// components/hero/Hero.jsx
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-[url('/src/assets/images/uterus.webp')] bg-bottom bg-opacity-50 pt-20">
-      <div className="max-w-7xl mx-auto px-4 pt-32">
+    <section className="min-h-screen bg-[#E6E6E6] relative flex items-center justify-center">
+      <div className="absolute inset-0 bg-[url('/src/assets/images/uterus.webp')] bg-cover bg-center opacity-10"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 flex flex-col items-center text-center mt-16">
         <h1 className="text-5xl font-bold text-[#FF1654] mb-6">
           Advanced imaging for compassionate care
         </h1>

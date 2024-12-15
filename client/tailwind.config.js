@@ -3,15 +3,16 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sourceSans: ['Source Sans Pro', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif']
+      },
       colors: {
         primary: '#FF1654',
         secondary: '#FFF5F7',
       },
       backgroundImage: {
         'hero-pattern': "url('./src/assets/images/uterus.webp')",
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
       },
       spacing: {
         '128': '32rem',

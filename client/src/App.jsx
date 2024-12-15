@@ -6,6 +6,7 @@ import StatsCard from './components/stats/StatsCard.jsx';
 import Video from './components/video/Video.jsx';
 import Articles from './components/articles/Articles.jsx';
 import Partners from './components/partners/Partners.jsx';
+import Footer from './components/footer/Footer.jsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Video />
         <Articles />
         <Partners />
+        <Footer />
       </div>
     </Router>
   );

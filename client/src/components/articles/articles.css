@@ -20,13 +20,13 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: 25%; /* Adjust based on left section width */
+  width: 45%; /* Adjust based on left section width */
   background-color: #FFF5F7;
-  z-index: 1;
+  z-index: 2;
 }
 
 .articles-left {
-  flex: 1;
+  flex: 1.2;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -34,6 +34,8 @@
   z-index: 2;
   background-color: #FFF5F7;
   justify-content: center;
+  padding-right: 4rem; /* Added padding */
+  min-width: 400px; /* Added minimum width */
 }
 
 .articles-left h2 {
@@ -65,34 +67,46 @@
 .articles-right {
   flex: 2;
   position: relative;
-  height: 600px;
+  height: 500px; /* Match the square dimension */
   overflow: visible;
   margin-right: -2rem;
+  display: flex;
+  align-items: center;
 }
 
 .articles-slider {
   display: flex;
   transition: transform 0.5s ease;
+  width: 500px; /* Set fixed width for square */
 }
 
 .article-card {
-  flex: 0 0 100%;
+  flex: 0 0 500px; /* Fixed width for square */
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  width: 100%;
-  height: 600px;
+  width: 500px; /* Fixed width */
+  min-height: 500px; /* Fixed height to match width */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+}
+
+.article-card.active {
+  opacity: 1; /* Full opacity for active card */
+  transform: scale(1.05); /* Slightly enlarge active card */
+  z-index: 1; /* Bring active card to front */
 }
 
 .article-image {
   width: 100%;
-  height: 400px;
+  height: 300px; /* Adjusted for better proportion */
   object-fit: cover;
 }
 
 .article-content {
-  padding: 2rem;
+  height: 300px; /* Remaining height */
+  padding: 1.5rem;
+  overflow: hidden;
 }
 
 .article-content h3 {
@@ -111,11 +125,11 @@
 }
 
 @media (max-width: 768px) {
-  .articles-container {
-    flex-direction: column;
-    gap: 2rem;
+  .article-card {
+    width: 100%;
+    height: 500px;
   }
-
+  
   .articles-left {
     text-align: center;
   }
@@ -126,5 +140,9 @@
 
   .articles-right {
     margin-right: 0;
+  }
+
+  .articles-slider {
+    width: 100%;
   }
 }

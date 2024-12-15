@@ -3,24 +3,26 @@ import './video.css';
 
 const Video = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-        <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/Z-cAyCqVxDM"
-            title="Sakura MedTech Company Overview"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+    <section className="video-section">
+      <div className="video-container">
+        <div className="video-left">
+          <div className="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/Z-cAyCqVxDM?autoplay=1&mute=1&loop=1&playlist=dlJ3__dUpss&controls=1&start=0"
+              title="Sakura MedTech Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
-        <div>
-          <p className="text-gray-700">
-            Sakura MedTech aims to change this status quo by improving the patient experience and increasing efficiency in gynecological procedures through innovative solutions in clinics and hospitals.
-          </p>
+        <div className="video-right">
+          <h2>Our Mission</h2>
+          <p>Sakura MedTech aims to change this status quo by improving the patient experience and increasing efficiency in gynecological examinations. We are developing innovative solutions in clinics and hospitals.</p>
         </div>
       </div>
     </section>
   );
 };
+
 export default Video;

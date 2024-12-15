@@ -1,20 +1,81 @@
+/* Hero.css */
 .hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #FFF5F7;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.video-background iframe {
+  width: 100vw;
+  height: 56.25vw;
   min-height: 100vh;
-  background-image: url('../../assets/images/uterus.webp');
-  background-size: cover;
-  background-position: center;
-  padding-top: 80px;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5; /* Reduced opacity for better text visibility */
 }
 
-.hero-title {
-  color: var(--primary-color);
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero-text {
-  color: var(--text-gray);
-  max-width: 42rem;
-  line-height: 1.75;
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FF1654;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.learn-more {
+  background-color: #FF1654;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.learn-more:hover {
+  background-color: #E6144D;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
 }

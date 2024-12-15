@@ -1,15 +1,50 @@
+/* partners.css */
 .partners-section {
-  @apply py-16 px-4;
+  padding: 4rem 0;
+  background-color: white;
 }
 
 .partners-title {
-  @apply text-2xl font-bold text-center mb-8;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #FF1654;
+  margin-bottom: 3rem;
 }
 
 .partners-container {
-  @apply flex justify-center items-center gap-12 flex-wrap max-w-4xl mx-auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
 }
 
 .partner-logo {
-  @apply h-16 object-contain;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .partners-container {
+    gap: 2rem;
+  }
+  
+  .partner-logo {
+    width: 150px;
+  }
+  
+  .partners-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 }

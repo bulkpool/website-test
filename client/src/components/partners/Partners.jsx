@@ -1,8 +1,13 @@
 // components/partners/partners.jsx
+import React from 'react';
+import './partners.css';
+
 import illinoisLogo from '../../assets/images/media.jpg';
 import iMadeLogo from '../../assets/images/media.png';
 import consultingLogo from '../../assets/images/media (1).jpg';
 import sonyCorpsLogo from '../../assets/images/media (2).jpg';
+import illinoisVenture from '../../assets/images/Illinois-Ventures.png';
+import chicagoBooth from '../../assets/images/3Hp5BbMf_400x400.jpg';
 
 // components/partners/partners.jsx
 const Partners = () => {
@@ -10,23 +15,23 @@ const Partners = () => {
     { id: 1, name: "Illinois", logo: illinoisLogo },
     { id: 2, name: "I-MADE", logo: iMadeLogo },
     { id: 3, name: "SonyCorps", logo: sonyCorpsLogo },
-    { id: 4, name: "Consulting", logo: consultingLogo }
+    { id: 4, name: "Consulting", logo: consultingLogo },
+    { id: 5, name: "illinoisVenture", logo: illinoisVenture},
+    { id: 6, name: "chicagoBooth", logo: chicagoBooth }
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-full mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Partnered with</h2>
-        <div className="flex justify-center items-center gap-16 flex-wrap">
-          {partners.map((partner) => (
-            <img
-              key={partner.id}
-              src={partner.logo}
-              alt={partner.name}
-              className="h-20 w-auto object-contain"
-            />
-          ))}
-        </div>
+    <section className="partners-section">
+      <h2 className="partners-title">Partnered with</h2>
+      <div className="partners-container">
+        {partners.map((partner) => (
+          <img
+            key={partner.id}
+            src={partner.logo}
+            alt={partner.name}
+            className="partner-logo"
+          />
+        ))}
       </div>
     </section>
   );

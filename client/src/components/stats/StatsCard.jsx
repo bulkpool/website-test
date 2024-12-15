@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import './stats.css';
  
 
 const StatsCard = () => {
@@ -31,7 +32,7 @@ const StatsCard = () => {
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
         {/* Introduction Section */}
         <div className="md:w-1/2 flex items-center">
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="font-sans font-bold text-gray-700 text-lg leading-relaxed">
             Cervical cancer is highly preventable through regular screening, yet women avoid screening due to fear, pain, embarrassment, or trauma. The outdated tools currently used in the procedure are a major barrier for screening.
           </p>
         </div>
@@ -43,10 +44,10 @@ const StatsCard = () => {
               key={index}
               className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
             >
-              <div className="font-sourceSans text-4xl font-bold text-[#FF1654]">
+              <div className="font-sans text-4xl font-bold text-[#FF1654]">
                 {stat.number}
               </div>
-              <p className="font-montserrat text-gray-700 mt-2">
+              <p className="font-body text-gray-700 mt-2">
                 {stat.text}
               </p>
             </div>

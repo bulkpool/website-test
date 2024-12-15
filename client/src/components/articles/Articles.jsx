@@ -1,72 +1,65 @@
-import React from 'react';
-import './articles.css';
-
-// In articles/articles.jsx
-const featuredArticles = [
-  {
-    id: 1,
-    image: "/src/assets/images/article1.jpg",
-    title: "Latest News About AI Care",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. It is important to implement it in corporate and your plan."
-  },
-  {
-    id: 2,
-    image: "/src/assets/images/article2.jpg",
-    title: "Healthcare Innovation",
-    content: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
-  },
-  {
-    id: 3,
-    image: "/src/assets/images/article3.jpg",
-    title: "Medical Technology",
-    content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  }
-];
-
 // components/articles/articles.jsx
+import React, { useState } from 'react';
+import './articles.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import articleImage1 from '../../assets/images/IMG-20240926-WA0004.jpg'
+import articleImage2 from '../../assets/images/IMG-20240323-WA0010.jpg'
+import articleImage3 from '../../assets/images/IMG-20240412-WA0038.jpg'
+
 const Articles = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const articles = [
     {
       id: 1,
-      image: '/src/assets/images/article1.jpg',
-      title: 'Latest News About AI Care',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      title: "iVenture welcomes 40 student entrepreneurs for ninth cohort",
+      content: "Sakura MedTech offers a superior, patient-centric imaging device for cervical cancer screening to reduce patient discomfort and improve medical efficiency for gynecologists.",
+      image: articleImage1
     },
     {
       id: 2,
-      image: '/src/assets/images/article2.jpg',
-      title: 'Healthcare Innovation',
-      content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+      title: "2024 Baylor New Venture Competition Top 10 Teams",
+      content: "Sakura MedTedch, Inc from the Univeristy of Illinois at Urbana-Champaign becomes a part of the top 10 teams",
+      image: articleImage2
     },
     {
       id: 3,
-      image: '/src/assets/images/article3.jpg',
-      title: 'Medical Technology',
-      content: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      title: " Twelve Student Startups Competing for $100,000 at Heartland Challenge",
+      content: "Designed to simulate the process of raising venture capital for a high-growth enterprise, the Heartland Challenge is a global, graduate student startup competition with a prize pool of more than $100,000.",
+      image: articleImage3
     }
   ];
 
+  const nextArticle = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % articles.length);
+  };
+
+  const prevArticle = () => {
+    setActiveIndex((prevIndex) => (prevIndex - 1 + articles.length) % articles.length);
+  };
+
   return (
-    <section className="bg-pink-50 py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-8">Featured Articles</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {articles.map((article) => (
-            <div key={article.id} className="bg-white p-6 rounded-lg shadow-md">
-              <img 
-                src={article.image} 
-                alt={article.title} 
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-              <h3 className="font-bold text-lg mb-2">{article.title}</h3>
-              <p className="text-gray-600">{article.content}</p>
-            </div>
-          ))}
+    <section className="articles-section">
+      <div className="articles-overflow-hide"></div>
+      <div className="articles-container">
+        <div className="articles-left">
+          <h2>Featured Articles</h2>
+          <div className="article-nav">
+            <button onClick={prevArticle}><FaChevronLeft /></button>
+            <button onClick={nextArticle}><FaChevronRight /></button>
+          </div>
         </div>
-        <div className="flex justify-center gap-2 mt-8">
-          <button className="w-3 h-3 rounded-full bg-[#FF1654]"></button>
-          <button className="w-3 h-3 rounded-full bg-gray-300"></button>
-          <button className="w-3 h-3 rounded-full bg-gray-300"></button>
+        <div className="articles-right">
+          <div className="articles-slider" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+            {articles.map((article, index) => (
+              <div key={article.id} className="article-card">
+                <img src={article.image} alt={article.title} className="article-image" />
+                <div className="article-content">
+                  <h3>{article.title}</h3>
+                  <p>{article.content}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

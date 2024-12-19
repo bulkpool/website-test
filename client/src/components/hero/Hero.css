@@ -48,15 +48,26 @@
 
 .hero-image {
   position: absolute;
-  right: -5%; /* Adjusted from -10% to bring image closer */
+  right: -5%;
   top: 50%;
-  transform: translateY(-50%); /* Centers the image vertically */
-  width: 60%; /* Reduced from 100% to maintain proper sizing */
+  transform: translateY(-50%);
+  width: 60%;
   height: 100%;
   background-image: url('../../assets/images/no sub shot extended.png');
-  background-size: auto; /* Changed from fill to contain */
-  background-repeat: no-repeat;
-  background-position: right center; /* Aligned to right */
-  mask-image: linear-gradient(to left, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+  background-size: cover;
+  background-position: right center;
+  mask-image: linear-gradient(to left, 
+    rgba(0,0,0,1) 60%, 
+    rgba(0,0,0,0.8) 70%,
+    rgba(0,0,0,0.6) 80%,
+    rgba(0,0,0,0.4) 90%,
+    rgba(0,0,0,0) 100%
+  );
+  -webkit-mask-image: linear-gradient(to left, 
+    rgba(0,0,0,1) 60%, 
+    rgba(0,0,0,0.8) 70%,
+    rgba(0,0,0,0.6) 80%,
+    rgba(0,0,0,0.4) 90%,
+    rgba(0,0,0,0) 100%
+  );
 }

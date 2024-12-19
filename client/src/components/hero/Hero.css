@@ -1,75 +1,62 @@
-/* Hero.css */
 .hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #FFF5F7;
-}
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.video-background iframe {
-  width: 100vw;
-  height: 56.25vw;
+  background-color: #f2c6d2;
   min-height: 100vh;
-  min-width: 177.77vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  padding-left: 4rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
-  position: relative;
+  max-width: 50%;
+  padding: 4rem;
+  color: black;
   z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
 }
 
 .hero-content h1 {
+  color: #d11948;
   font-size: 3.5rem;
-  color: #FF1654;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
 }
 
 .hero-content p {
   font-size: 1.2rem;
-  color: #333;
   margin-bottom: 2rem;
-  line-height: 1.6;
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
 }
 
 .learn-more {
-  background-color: #FF1654;
-  color: white;
+  background-color: white;
+  color: #d11948;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  align-self: flex-start;
 }
 
 .learn-more:hover {
-  background-color: #e6144d;
+  background-color: #f0f0f0;
+}
+
+.hero-image {
+  position: absolute;
+  right: -5%; /* Adjusted from -10% to bring image closer */
+  top: 50%;
+  transform: translateY(-50%); /* Centers the image vertically */
+  width: 60%; /* Reduced from 100% to maintain proper sizing */
+  height: 100%;
+  background-image: url('../../assets/images/no sub shot extended.png');
+  background-size: auto; /* Changed from fill to contain */
+  background-repeat: no-repeat;
+  background-position: right center; /* Aligned to right */
+  mask-image: linear-gradient(to left, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
 }

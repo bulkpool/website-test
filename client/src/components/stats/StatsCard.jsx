@@ -1,12 +1,30 @@
-// components/stats/statsCard.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './stats.css';
 
 const StatsCard = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const statsRef = useRef(null);
 
   useEffect(() => {
-    setIsVisible(true);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
   }, []);
 
   const stats = [
@@ -31,11 +49,7 @@ const StatsCard = () => {
   ];
 
   return (
-    <section className="stats-section">
-      <div className="stats-intro">
-        <h2>The Current Challenge</h2>
-        <p>Cervical cancer is highly preventable through regular screening, yet women avoid screening due to fear, pain, embarrassment, or trauma. The outdated tools currently used in the procedure are a major barrier for screening.</p>
-      </div>
+    <section className="stats-section" ref={statsRef}>
       <div className="stats-container">
         {stats.map((stat, index) => (
           <div 
@@ -43,12 +57,15 @@ const StatsCard = () => {
             className={`stat-card ${isVisible ? 'visible' : ''}`}
             style={{ animationDelay: `${index * 0.2}s` }}
           >
-            {stat.icon}
             <h3>{stat.title}</h3>
             <div className="stat-number">{stat.number}</div>
             <p>{stat.description}</p>
           </div>
         ))}
+      </div>
+      <div className={`stats-intro ${isVisible ? 'visible' : ''}`}>
+        <h2>The Current Challenge</h2>
+        <p>Cervical cancer is highly preventable through regular screening, yet women avoid screening due to fear, pain, embarrassment, or trauma. The outdated tools currently used in the procedure are a major barrier for screening.</p>
       </div>
     </section>
   );

@@ -1,84 +1,90 @@
 /* stats.css */
 .stats-section {
   background-color: #FFF5F7;
-  padding: 6rem 0;
+  /* padding: 6rem 0; */
+  position: relative;
+  overflow: hidden;
+  
 }
 
 .stats-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: -50px auto; /* Creates overlap with hero section */
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  padding: 0 2rem;
+  gap: 6rem;
+  padding: 0 4rem;
+  z-index: 1;
 }
 
 .stats-intro {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 4rem auto;
+  margin: 4rem auto; 
   padding: 0 2rem;
-}
-
-.stats-intro h2 {
-  color: #FF1654;
-  font-size: 2.5rem;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.stats-intro p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.stat-card {
-  text-align: center;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease forwards;
 }
 
-.stat-card.visible {
+.stats-intro.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.stats-icon {
+.stats-intro h2 {
   color: #FF1654;
   font-size: 3rem;
-  margin-bottom: 1.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.stats-intro p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.stat-card {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .stat-card h3 {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .stat-number {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: #FF1654;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .stat-card p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #666;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -90,5 +96,14 @@
   .stats-container {
     grid-template-columns: 1fr;
     gap: 3rem;
+    padding: 0 2rem;
+  }
+  
+  .stats-intro h2 {
+    font-size: 2.5rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
   }
 }

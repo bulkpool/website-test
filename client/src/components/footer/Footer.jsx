@@ -42,7 +42,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer-copyright">
-          <p>&copy; 2024 Sakura MedTech. All rights reserved.</p>
+          <p>&copy; 2024 Sakura MedTech Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>

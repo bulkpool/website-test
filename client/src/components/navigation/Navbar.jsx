@@ -16,34 +16,34 @@ const Navbar = () => {
               className={`text-white px-4 py-2 rounded-full transition-all ${
                 activePage === 'home' ? 'bg-white/20' : 'hover:bg-white/10'
               }`}
-              onClick={() => setActivePage('home')}
+              onClick={() => setActivePage('Home')}
             >
               Home
             </a>
             <a 
-              href="/news" 
+              href="/about" 
               className={`text-white px-4 py-2 rounded-full transition-all ${
                 activePage === 'news' ? 'bg-white/20' : 'hover:bg-white/10'
               }`}
-              onClick={() => setActivePage('news')}
+              onClick={() => setActivePage('About')}
             >
-              News
+              About Us
             </a>
             <a 
-              href="/story" 
+              href="/apply" 
               className={`text-white px-4 py-2 rounded-full transition-all ${
                 activePage === 'story' ? 'bg-white/20' : 'hover:bg-white/10'
               }`}
-              onClick={() => setActivePage('story')}
+              onClick={() => setActivePage('Apply')}
             >
-              Story
+              Apply
             </a>
             <a 
               href="/contact" 
               className={`text-white px-4 py-2 rounded-full transition-all ${
                 activePage === 'contact' ? 'bg-white/20' : 'hover:bg-white/10'
               }`}
-              onClick={() => setActivePage('contact')}
+              onClick={() => setActivePage('Contact')}
             >
               Contact Us
             </a>

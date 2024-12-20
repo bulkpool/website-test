@@ -6,10 +6,10 @@ import articleImage1 from '../../assets/images/IMG-20240926-WA0004.jpg'
 import articleImage2 from '../../assets/images/IMG-20240323-WA0010.jpg'
 import articleImage3 from '../../assets/images/IMG-20240412-WA0038.jpg'
 import articleImage4 from '../../assets/images/IMG_4231.JPG'
-import articleImage5 from '../../assets/images/Sakura networking.JPG'
+import articleImage5 from '../../assets/images/Sakura Med Tech with check - 1.jpg'
 import articleImage6 from '../../assets/images/_DSC4250.JPG'
-import articleImage7 from '../../assets/images/IMG-20240412-WA0038.jpg'
-// import articleImage8 from '../../assets/images/IMG-20240412-WA0038.jpg'
+import articleImage7 from '../../assets/images/_DSC0181.JPG'
+import articleImage8 from '../../assets/images/IMG-20240210-WA0006.jpg'
 
 const Articles = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -45,14 +45,14 @@ const Articles = () => {
     {
       id: 5,
       title: "7 Teams Set To Compete For Record Funding In The Cozad New Venture Challenge 2023",
-      content: "7 Teams Set To Compete For Record Funding In The Cozad New Venture Challenge 2023",
+      content: "This year, the campus-wide competition kicked off in early February with over 100 competing teams representing 10 colleges.",
       image: articleImage5,
       url: "https://tec.illinois.edu/news/55036",
     },
     {
       id: 6,
       title: "UIUC Student Startups Win Big at College New Venture Challenge!",
-      content: "UIUC Student Startups Win Big at College New Venture Challenge!",
+      content: "The College New Venture Challenge (CNVC) is the dedicated track of the University of Chicago's Polsky Center’s nationally-ranked New Venture Challenge program",
       image: articleImage6,
       url: "https://tec.illinois.edu/news/53808",
     },
@@ -63,12 +63,13 @@ const Articles = () => {
       image: articleImage7,
       url: "https://polsky.uchicago.edu/2023/02/23/7-startups-vie-for-investment-at-the-2023-college-new-venture-challenge/",
     },
-    // {
-    //   id: 8,
-    //   title: " Twelve Student Startups Competing for $100,000 at Heartland Challenge",
-    //   content: "Designed to simulate the process of raising venture capital for a high-growth enterprise, the Heartland Challenge is a global, graduate student startup competition with a prize pool of more than $100,000.",
-    //   image: articleImage8
-    // }
+    {
+      id: 8,
+      title: "27 ventures announced as 2024 ASUio finalists",
+      content: "Twenty-seven student-led ventures have emerged as finalists for the 2024 ASU Innovation Open. ASUio is a unique opportunity for top collegiate entrepreneurs to take their ventures to the next level.",
+      image: articleImage8,
+      url: "https://asu.io/2023/12/student-ventures-announced-as-2024-asuio-semifinalists/",
+    },
 
   ];
 

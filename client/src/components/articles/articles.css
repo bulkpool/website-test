@@ -8,7 +8,7 @@
 
 .articles-container {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 2rem;
   display: flex;
   gap: 6rem;
   padding: 0 4em;
@@ -20,7 +20,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: 45%; /* Adjust based on left section width */
+  width: 32%; /* Adjust based on left section width */
   background-color: #FFF5F7;
   z-index: 2;
 }
@@ -98,7 +98,8 @@
   width: 500px; /* Fixed width */
   min-height: 500px; /* Fixed height to match width */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0.5;
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
 }
 
 .article-card.active {

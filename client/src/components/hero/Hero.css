@@ -1,16 +1,17 @@
 .hero-section {
-  background-color: #f2c6d2;
+  background-image: url('../../assets/images/no\ sub\ shot\ extended\ with\ gradient.png');
+  background-size: cover;
   min-height: 100vh;
   display: flex;
-  padding-left: 4rem;
+  padding-left: 2rem;
   align-items: center;
   position: relative;
   overflow: hidden;
 }
 
 .hero-content {
-  max-width: 50%;
-  padding: 4rem;
+  max-width: 45%;
+  padding: 5rem;
   color: black;
   z-index: 2;
 }
@@ -48,7 +49,7 @@
 
 .hero-image {
   position: absolute;
-  right: -5%;
+  right: -8%;
   top: 50%;
   transform: translateY(-50%);
   width: 60%;

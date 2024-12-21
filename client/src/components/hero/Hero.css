@@ -54,7 +54,6 @@
   transform: translateY(-50%);
   width: 60%;
   height: 100%;
-  background-image: url('../../assets/images/no sub shot extended.png');
   background-size: cover;
   background-position: right center;
   mask-image: linear-gradient(to left, 

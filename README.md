@@ -71,7 +71,9 @@ You will likely have a merge commit error for the README.md file. Click the file
 
 5. Push the changes to the public repository
 ```bash
-git push origin main
+git add .
+git commit -m "commit message here"
+git push
 ```
 
 6. Make sure the README.md file on the public repository says "Copyright 2024 Sakura MedTech, Inc. All Rights Reserved."

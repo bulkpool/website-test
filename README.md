@@ -67,7 +67,7 @@ You may have to do the following line if there is a commit history error
 ```bash
 git merge private/main --allow-unrelated-histories
 ```
-You will likely have a merge commit error for the README.md file. Click the file and resolve the merge error by choosing to keep the README in the published repository.
+You will likely have a merge commit error for the README.md file. Click the file and resolve the merge error by choosing to keep the README in the website-published repository.
 
 5. Push the changes to the public repository
 ```bash

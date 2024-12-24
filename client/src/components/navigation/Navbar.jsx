@@ -34,7 +34,12 @@ const Navbar = () => {
               className={`text-white px-4 py-2 rounded-full transition-all ${
                 activePage === 'story' ? 'bg-white/20' : 'hover:bg-white/10'
               }`}
-              onClick={() => setActivePage('Apply')}
+              onClick={ 
+                () => {
+                  setActivePage('Apply');
+                  window.open('https://forms.gle/Suteamkf2XTyiHVP7', '_blank');
+                }
+              }
             >
               Apply
             </a>

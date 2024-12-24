@@ -8,6 +8,7 @@ import consultingLogo from '../../assets/images/media (1).jpg';
 import sonyCorpsLogo from '../../assets/images/media (2).jpg';
 import illinoisVenture from '../../assets/images/Illinois-Ventures.png';
 import chicagoBooth from '../../assets/images/3Hp5BbMf_400x400.jpg';
+import nucleateChicago from '../../assets/images/nucleateChicago.png';
 
 // components/partners/partners.jsx
 const Partners = () => {
@@ -17,7 +18,8 @@ const Partners = () => {
     { id: 3, name: "SonyCorps", logo: sonyCorpsLogo },
     { id: 4, name: "Consulting", logo: consultingLogo },
     { id: 5, name: "illinoisVenture", logo: illinoisVenture},
-    { id: 6, name: "chicagoBooth", logo: chicagoBooth }
+    { id: 6, name: "chicagoBooth", logo: chicagoBooth },
+    { id: 7, name: "nucleateChicago", logo: nucleateChicago}
   ];
 
   return (

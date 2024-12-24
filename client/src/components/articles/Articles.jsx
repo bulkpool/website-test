@@ -59,7 +59,7 @@ const Articles = () => {
     {
       id: 7,
       title: " 7 Startups Vie for Investment at the 2023 College New Venture Challenge - Polsky Center for Entrepreneurship and Innovation",
-      content: "The Polsky Center for Entrepreneurship and Innovation and The University of Illinois’ Grainger College of Engineering are pleased to announce the seven finalists selected to compete in the College New […]",
+      content: "Launched in 2012, the CNVC is one of five tracks of the University of Chicago Booth School of Business’ New Venture Challenge",
       image: articleImage7,
       url: "https://polsky.uchicago.edu/2023/02/23/7-startups-vie-for-investment-at-the-2023-college-new-venture-challenge/",
     },
